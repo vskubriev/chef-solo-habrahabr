@@ -1,0 +1,24 @@
+{
+    "mysql": {
+        "server_root_password": "123456",
+        "server_debian_password": "654321",
+        "server_repl_password": "345678",
+        "socket": "/var/run/mysqld/mysqld.sock",
+        "bind_address": "localhost",
+        "user_name": "some_user",
+        "user_password": "abcdef"
+    },
+    "hostname": "navio.kz",
+    "deploy_user": {
+        "encoded_password": "some_encoded_password"
+    },
+    "nginx": {
+        "config_filename": "example_com"
+    },
+    "app_name": "navio",
+    "run_list": [
+        "recipe[dims::default]",
+        "recipe[openssl::default]",
+        "recipe[mysql::server]"
+    ]
+}

@@ -1,0 +1,14 @@
+server {
+  listen      80;
+  server_name  www.example.com .example.com;
+  
+  root /var/www/example_com/current/public;
+
+  error_page 500 502 503 504 /500.html;
+  error_page 404 /404.html;
+
+  location = /500.html {
+    root /var/www/example_com/current/public;
+  }
+}
+
